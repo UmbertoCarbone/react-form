@@ -8,15 +8,18 @@ function App() {
   function handleSubmit(e) {
     e.preventDefault();
     setList([...list, item])
-
-
+    setItem("");
   }
   return (
     <>
       <div className="container">
         <ul>
-          {list.map((article) => (
-            <li>{article}</li>
+          {list.map((article, index) => (
+            <li key={index}>
+              {article}
+              <button type="button" className="btn ">
+                <i className="bi bi-trash3"></i></button>
+            </li>
           ))}
         </ul>
         <form onSubmit={handleSubmit}>
@@ -25,7 +28,7 @@ function App() {
             <i className="bi bi-plus"></i>
           </button>
         </form >
-      </div>
+      </div >
     </>
   )
 }
