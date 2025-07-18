@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 function App() {
-  const articles = ["Lorem1", "Lorem2", "Lorem3", "Lorem4", "Lorem5", "Lorem6"]
+  const articles = []
   const [list, setList] = useState(articles)
   const [item, setItem] = useState("")
 
